@@ -1,12 +1,11 @@
-"use client";
-
+import { SignInButton, SignOutButton } from "@/components/buttons";
 import axios from "axios";
 
 import Image from "next/image";
 import { useState } from "react";
 
 export default function Home() {
-  const [media, setMedia] = useState("");
+  // const [media, setMedia] = useState("");
 
   // async function test(query: string) {
   //   const options = {
@@ -33,7 +32,17 @@ export default function Home() {
 
   return (
     <div>
-      <h1>Movie Tracker</h1>
+      <div>
+        <h1>Movie Tracker</h1>
+        <div>
+          <li>
+            <SignInButton />
+          </li>
+          <li>
+            <SignOutButton />
+          </li>
+        </div>
+      </div>
     </div>
   );
 }
