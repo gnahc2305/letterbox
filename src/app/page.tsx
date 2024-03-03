@@ -1,10 +1,17 @@
 import { SignInButton, SignOutButton } from "@/components/buttons";
 import axios from "axios";
+import { getServerSession } from "next-auth";
 
 import Image from "next/image";
+import { redirect } from "next/navigation";
 import { useState } from "react";
+import { authOptions } from "./api/auth/[...nextauth]/route";
 
 export default function Home() {
+  // if (!session) {
+  //   redirect("/api/auth/signin");
+  // }
+
   // const [media, setMedia] = useState("");
 
   // async function test(query: string) {
