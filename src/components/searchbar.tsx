@@ -1,15 +1,15 @@
 "use client";
 
 import axios from "axios";
-
 import { useState } from "react";
+import { FaSearch } from "react-icons/fa";
+import { useRouter } from "next/navigation";
 
 import { Input } from "./ui/input";
 
-import { FaSearch } from "react-icons/fa";
-
 const SearchBar = () => {
   const [query, setQuery] = useState("");
+  const router = useRouter();
 
   async function fetchApi(query: string) {
     // format string to URI (%20)
@@ -38,7 +38,8 @@ const SearchBar = () => {
 
   function onSubmit(e: any) {
     e.preventDefault();
-    fetchApi(query);
+    let formattedQuery = encodeURIComponent(query);
+    router.push(`/${formattedQuery}`)
   }
 
   return (
