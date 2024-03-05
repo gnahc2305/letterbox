@@ -1,11 +1,11 @@
-import Link from 'next/link'
-import React from 'react'
+import Link from "next/link";
+import React from "react";
 
 import { MdLocalMovies } from "react-icons/md";
-import { FaSearch } from "react-icons/fa";
 
 import { SignInButton, SignOutButton } from "./buttons";
-import { Input } from './ui/input';
+import { Input } from "./ui/input";
+import SearchBar from "./searchbar";
 
 const DashboardNavbar = () => {
   return (
@@ -15,10 +15,7 @@ const DashboardNavbar = () => {
         <MdLocalMovies size={50} />
       </Link>
 
-      <div className='flex items-center space-x-1 w-[500px]'>
-        <Input type="text" placeholder="Search" />
-        {/* <FaSearch size={30} color='gray' /> */}
-      </div>
+      <SearchBar />
 
       {/* add borgir menu for account */}
       <div className="flex text-xl space-x-3">
@@ -26,7 +23,7 @@ const DashboardNavbar = () => {
         <SignOutButton />
       </div>
     </div>
-  )
-}
+  );
+};
 
-export default DashboardNavbar
+export default DashboardNavbar;
