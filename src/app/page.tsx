@@ -6,6 +6,7 @@ import Image from "next/image";
 import { redirect } from "next/navigation";
 import { useState } from "react";
 import { authOptions } from "./api/auth/[...nextauth]/route";
+import HomeNavbar from "@/components/home-navbar";
 
 export default function Home() {
   // if (!session) {
@@ -39,17 +40,7 @@ export default function Home() {
 
   return (
     <div>
-      <div>
-        <h1>Movie Tracker</h1>
-        <div>
-          <li>
-            <SignInButton />
-          </li>
-          <li>
-            <SignOutButton />
-          </li>
-        </div>
-      </div>
+      <HomeNavbar />
     </div>
   );
 }
