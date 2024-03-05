@@ -11,26 +11,26 @@ const SearchBar = () => {
   const [query, setQuery] = useState("");
   const router = useRouter();
 
-  async function fetchApi(query: string) {
-    // format string to URI (%20)
-    let formattedString = encodeURIComponent(query);
+//   async function fetchApi(query: string) {
+//     // format string to URI (%20)
+//     let formattedString = encodeURIComponent(query);
 
-    const options = {
-      method: "GET",
-      url: `https://imdb207.p.rapidapi.com/title/${formattedString}`,
-      headers: {
-        "X-RapidAPI-Key": process.env.NEXT_PUBLIC_RAPID_API_KEY,
-        "X-RapidAPI-Host": process.env.NEXT_PUBLIC_RAPID_API_HOST,
-      },
-    };
+//     const options = {
+//       method: "GET",
+//       url: `https://imdb207.p.rapidapi.com/title/${formattedString}`,
+//       headers: {
+//         "X-RapidAPI-Key": process.env.NEXT_PUBLIC_RAPID_API_KEY,
+//         "X-RapidAPI-Host": process.env.NEXT_PUBLIC_RAPID_API_HOST,
+//       },
+//     };
 
-    try {
-      const response = await axios.request(options);
-      console.log(response.data);
-    } catch (error) {
-      console.error(error);
-    }
-  }
+//     try {
+//       const response = await axios.request(options);
+//       console.log(response.data);
+//     } catch (error) {
+//       console.error(error);
+//     }
+//   }
 
   function onChange(e: any) {
     setQuery(e.target.value);
