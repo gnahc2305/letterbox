@@ -39,7 +39,7 @@ const SearchBar = () => {
   function onSubmit(e: any) {
     e.preventDefault();
     let formattedQuery = encodeURIComponent(query);
-    router.push(`/${formattedQuery}`)
+    router.push(`/search/${formattedQuery}`)
   }
 
   return (

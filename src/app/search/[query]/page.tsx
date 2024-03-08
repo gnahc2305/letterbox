@@ -42,7 +42,7 @@ const SearchPage: React.FC<SearchPageProps> = async ({ params }) => {
       <DashboardNavbar />
       <div>
         {results.result.map((res: any) => (
-            <QueryCard key={res.imdb_id} title={res.title} type={res.type} img={res.poster} />
+            <QueryCard key={res.imdb_id} title={res.title} type={res.type} img={res.poster} id={res.imdb_id} />
         ))}
         {/* <QueryCard
           title="Dune"
